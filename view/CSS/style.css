@@ -1,0 +1,624 @@
+/*Made by Joan Marc Martínez Motis
+ Here I will save some propeties so that I can change them in an easier way */
+
+
+
+/* Tutorials i have used
+ https://piccalil.li/blog/a-more-modern-css-reset/ 
+ https://www.youtube.com/watch?v=3K6zr1CdZy8&list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA&index=2
+*/
+
+html {
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+
+    line-height: 1.5;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/*
+Tutorial used https://www.youtube.com/watch?v=U8smiWQ8Seg
+*/
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/*-- ------------------------------------------------------------------ NAV ---------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.main-nav {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Slabo 27px', sans-serif;
+    font-weight: 600;
+    position: relative;
+    width: 100%;
+    height: 10vh;
+}
+
+.main-menu {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    vertical-align: middle;
+    color: white;
+}
+
+.main-nav li {
+    height: 100%;
+    
+}
+
+
+
+.main-nav button {
+    font-size: small;
+    height: 70%;
+    min-width: 100px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10%;
+    margin-right: 20px;
+}
+
+
+
+.main-nav a:hover {
+    color: #8B6A9C;
+}
+
+
+.logo-nav {
+    margin-top: 5%;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 6%;
+   
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+
+.sidebar {
+    z-index: 9999;
+    color: black;
+    border-radius: 20px 0 0 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.sidebar li:nth-child(1) {
+    margin-left: 30%;
+    
+}
+
+
+.sidebar li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    
+}
+
+.sidebar a {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #8B6A9C;
+}
+
+
+.menu-button {
+    display: none;
+
+}
+
+
+.nav-form {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+    width: 100%;
+    height: 100%;
+}
+
+.search-bx {
+    width: 80%;
+    height: 50%;
+    border: solid 1px white;
+    border-radius: 3px;
+    margin-right: 2%;
+}
+
+.search-icon {
+    width: 10% ;
+    height: 40% ;
+}
+
+.search-icon:hover {
+    filter: invert(48%) sepia(17%) saturate(880%) hue-rotate(236deg) brightness(90%) contrast(90%) ;
+}
+
+.main-menu li:nth-child(5) {
+    margin-left: 30%;
+    width: 30%;
+}
+
+
+
+
+
+.pfpNav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-top: 24%;
+}
+
+
+@media (max-width: 900px) {
+    
+    .main-nav {
+        background-color: rgb(0, 0, 0);
+        font-family: 'Slabo 27px', sans-serif;
+        font-weight: 600;
+        position: relative;
+        width: 100%;
+        height: 8vh;    
+    }
+    .main-nav a {
+        padding: 0px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        background-color: rgb(0, 0, 0);
+        font-family: 'Slabo 27px', sans-serif;
+        font-weight: 600;
+        position: relative;
+        width: 100%;
+        height: 7vh;
+    }
+    
+    
+}
+
+
+@media (max-width: 400px) {
+    .main-nav {
+        background-color: rgb(0, 0, 0);
+        font-family: 'Slabo 27px', sans-serif;
+        font-weight: 600;
+        position: relative;
+        width: 100%;
+        height: 6vh;
+    }
+}
+@media (max-width: 1000px) {
+    .main-nav li {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+        min-width: 10vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-menu li:nth-child(5) {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center; 
+        width: 60%;
+    }
+    
+}
+
+
+
+/*-- ------------------------------------------------------------------ FOOTER---------------------------------------------------------------------------------*/
+
+.footer {
+
+    height: 25vh;
+    background-color: #181414;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+
+
+.footer-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: 5% 45% 45% 5%;
+}
+
+.footer-container-1-1 {
+    font-size: 3em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.footer-container-1-2 {
+    font-size: 1.2em;
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.footer-container-1-3 {
+    font-size: 1.2em;
+    text-align: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.footer-container-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+
+}
+
+.footer-container-2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 4%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.footer-container-2 li:last-child {
+    margin-left: auto !important;
+}
+
+.ul-apps {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.ul-apps li>a>img {
+    margin-top: 5%;
+    width: 50%;
+    height: 92%;
+}
+
+.ul-apps p {
+    margin-top: 4%;
+    width: 50%;
+    height: 92%;
+
+
+}
+
+.ul-download {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.ul-download li {
+    display: flex;
+}
+
+.ul-download li>a>img {
+    width: auto;
+    height: 50px;
+    margin: 0;
+   
+}
+
+@media(max-width:800px) {
+    .footer {
+        height: 55vh;
+    }
+
+    .ul-download {
+        flex-direction: column;
+    }
+
+    .ul-apps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center; 
+
+    }
+
+    .ul-apps li {
+    width: 40%;
+    justify-content: flex-end;
+    }
+
+ 
+
+    .footer-container-1-1 {
+        font-size: 1.7em;
+
+    }
+
+    .footer-container-1-2 {
+        font-size: 1em;
+    }
+
+    .footer-container-1-3 {
+        font-size: 1em;
+    }
+    .footer-container-2 {
+        font-size: 8px;
+    }
+
+}
+
+
+.popup{
+    display: none;
+    position:absolute;
+    top: 100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: top 0ms ease-in-out 300ms;
+}
+
+.popup .overlay{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out 200ms;
+
+
+}
+
+.popup .popup-content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:95%;
+    min-height: 50vh;
+    height: auto;
+    max-width: 350px;
+    background: white;
+    padding: 25px;
+    z-index: 999;
+    box-shadow: 0p 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+
+}
+
+.atext{
+    margin-top:2vh;
+    color: black;
+}
+
+
+.popup .popup-content h2{
+    margin: 10px 0px;
+    font-size: 25px;
+    color: #111;
+    text-align: center;
+}
+
+.popup .popup-content p{
+    margin: 15px 0px;
+    color: #222;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.popup .popup-content .controls{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+}
+
+.popup .popup-content .controls button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.popup .popup-content .controls .close-btn{
+    background: transparent;
+    color: black;
+}
+
+.popup .popup-content .controls .submit-btn{
+    background:black;
+    border: solid 1px black;
+    color: #fff;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.popup .popup-content .controls .submit-btn:hover{
+    background:white;
+    border: solid 1px black;
+    color: black;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.popup.active{
+    display: flex;
+    top:0px;
+    transition: top 0ms ease-in-out 0ms;
+}
+
+.popup.active .overlay{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.popup.active .popup-content{
+    transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.login-box input{
+  margin-top: 10%;
+
+}
